@@ -56,10 +56,11 @@ int pilihLokasi(const string& label) {
 void simpanKeFile(Order& o) {
     ofstream file("order.txt");
     if (file.is_open()) {
-        file << "=== ORDER AKTIF ===\n";
-        file << "==============================================\n";
+        file << "======        Topsojek Surabaya         ======\n";
+        file <<"            ORDER ANDA SEDANG AKTIF            \n";
+        file << "----------------------------------------------\n";
         file << "Mohon untuk menunggu driver sampai lokasi asal\n";
-        file << "==============================================\n";
+        file << "----------------------------------------------\n";
         file << "Nama Pelanggan : " << o.pelanggan << "\n";
         file << "Driver         : " << o.driver << "\n";
         file << "Asal           : " << o.asal << "\n";
@@ -194,7 +195,7 @@ int main() {
         cout << "4. Hapus Order saya\n";
         cout << "5. Keluar\n";
         cout << "Pilih menu (1-5): ";
-        
+
         cin >> pilihan;
 
         switch (pilihan) {
